@@ -12,7 +12,7 @@ const app = express();
 
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://real-estate-property-management-system-o3og7oqfk.vercel.app'
+    'https://real-estate-property-management-sys.vercel.app'
 ];
 
 app.use(cors({
