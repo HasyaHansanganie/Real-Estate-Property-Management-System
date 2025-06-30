@@ -6,7 +6,7 @@ A minimal full-stack web platform inspired by Zillow, featuring property listing
 ## 📽️ Demo Video
 
 <a href="https://drive.google.com/file/d/1P5OxIDxH7pXa-mtfw90DpeUwJ9jbUoCS/view?usp=sharing" target="_blank">
-  <img src="frontend/assests/demoPreview.png" alt="Click here to watch the demo" width="600">
+  <img src="frontend/src/assests/demoPreview.png" alt="Click here to watch the demo" width="600">
 </a>
 
 ## Technologies Used
