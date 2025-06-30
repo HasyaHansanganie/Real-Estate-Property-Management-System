@@ -10,10 +10,9 @@ const multerErrorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
-// Middleware
 app.use(cors({
-    origin: 'http://localhost:3000', // ✅ explicitly allow your React app
-    credentials: true // ✅ allow cookies or auth headers
+    origin: 'http://localhost:3000',
+    credentials: true
 }));
 
 app.use(express.json());
@@ -23,7 +22,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/properties", propertyRoutes);
 app.use(multerErrorHandler);
 
-// Simple test route
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
@@ -39,7 +37,7 @@ const createInitialAdmin = async () => {
                 password: hashed,
                 role: "admin"
             });
-            console.log("🛡️ Admin account created: admin@homehive.com / Admin@123");
+            console.log("Admin account created: admin@homehive.com / Admin@123");
         } else {
             console.log("Admin already exists.");
         }
@@ -48,7 +46,6 @@ const createInitialAdmin = async () => {
     }
 };
 
-
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -56,7 +53,7 @@ mongoose.connect(process.env.MONGO_URI, {
 })
     .then(() => {
         console.log('MongoDB Connected');
-        createInitialAdmin(); // 👈 CALL IT HERE
+        createInitialAdmin();
     })
     .catch(err => console.error(err));
 
